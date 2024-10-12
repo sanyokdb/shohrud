@@ -1002,6 +1002,9 @@ h5 {
   height: 760px;
 }
 .hero__title {
+  transform: translateY(-5%) scale(0.8);
+  opacity: 0;
+  transition: 1s ease;
   margin: 0;
   width: 100%;
   max-width: 768px;
@@ -1021,6 +1024,11 @@ h5 {
   background-position: center center;
   background-size: cover;
   padding: 0 var(--container-offset) 68px;
+}
+.hero .swiper-slide-active .hero__title {
+  transform: translateY(0%) scale(1);
+  opacity: 1;
+  transition: 1s ease;
 }
 .hero .swiper-pagination {
   bottom: 20px;
