@@ -1326,6 +1326,20 @@ h5 {
   .collections__list {
     --elemets: 2;
   }
+  .collections__button {
+    margin-top: 30px;
+  }
+  .collections__btn {
+    font-size: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .collections__btn {
+    display: block;
+  }
+  .collections__btn span {
+    display: none;
+  }
 }
 @media (max-width: 477.98px) {
   .collections__list {
