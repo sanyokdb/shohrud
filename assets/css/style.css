@@ -620,12 +620,14 @@ progress {
   --body-color: #745238;
   --outline: 2px dashed currentColor;
   --outline-offset: 3px;
+  --header-height: 90px;
   --transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 @media (max-width: 1199.98px) {
   :root {
     --container-offset: 20px;
+    --header-height: 72px;
   }
 }
 @media (max-width: 575.98px) {
@@ -1151,7 +1153,7 @@ h5 {
   align-items: center;
   align-items: center;
   gap: 15px;
-  height: 90px;
+  height: var(--header-height);
 }
 .header__overlay {
   position: absolute;
@@ -1185,9 +1187,6 @@ h5 {
   z-index: 3;
 }
 @media (max-width: 1199.98px) {
-  .header__container {
-    height: 72px;
-  }
   .header__logo img {
     width: auto;
     height: 50px;
@@ -1220,6 +1219,7 @@ h5 {
 }
 .hero .hero-slider {
   background-size: cover;
+  overflow: hidden;
   height: 700px;
 }
 .hero__title {
@@ -1289,6 +1289,9 @@ h5 {
   .hero .swiper-slide {
     padding-bottom: 30px;
   }
+  .hero .swiper-slide::before {
+    height: 400px;
+  }
   .hero .swiper-pagination {
     display: none;
   }
@@ -1297,9 +1300,17 @@ h5 {
   .hero .hero-slider {
     height: 400px;
   }
+  .hero .swiper-slide::before {
+    height: 200px;
+  }
   .hero .hero__title {
     font-size: 44px;
     text-align: right;
+  }
+}
+@media (max-width: 477.98px) {
+  .hero .hero-slider {
+    height: 320px;
   }
 }
 
