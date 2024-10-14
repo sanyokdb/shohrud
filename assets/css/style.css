@@ -709,7 +709,28 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: var(--second-font-family);
   line-height: 1.1;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 44px;
+}
+
+h5 {
+  font-size: 30px;
 }
 
 .d-none {
@@ -770,7 +791,7 @@ h5 {
   cursor: pointer;
   background: var(--primary-color);
   padding: 12px 24px;
-  color: var(--black);
+  color: var(--primary-light);
   font-weight: 500;
   font-size: var(--body-font-size);
   line-height: 32px;
@@ -779,6 +800,9 @@ h5 {
           user-select: none;
   text-align: center;
   border: 2px solid transparent;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .btn--outline {
   background-color: transparent;
@@ -1283,71 +1307,54 @@ h5 {
   --elemets: 3;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap);
   justify-content: center;
+  gap: var(--gap);
 }
 .collections__item {
   width: calc((100% - (var(--elemets) - 1) * var(--gap)) / (var(--elemets)));
 }
+.collections__button {
+  margin-top: 60px;
+  text-align: center;
+}
+.collections__btn {
+  font-family: var(--second-font-family);
+  font-size: 48px;
+  border-radius: 100px;
+}
 @media (max-width: 767.98px) {
   .collections__list {
     --elemets: 2;
-    --gap: 20px;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 477.98px) {
   .collections__list {
     --elemets: 1;
-    --gap: 10px;
-  }
-  .collections__item:nth-child(even) .collection {
-    flex-direction: row-reverse;
   }
 }
 
 .collection {
-  transition: transform 0.3s ease;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 .collection__img {
-  transition: transform 0.3s ease;
   max-width: 100%;
   height: auto;
 }
 .collection__name {
-  font-size: 50px;
-  font-family: var(--second-font-family);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 500;
+  margin-top: 10px;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 .collection__name-link {
   color: var(--primary-color);
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .collection__name {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
-@media (max-width: 767.98px) {
-  .collection__name {
-    font-size: 35px;
-  }
-}
-@media (max-width: 575.98px) {
-  .collection {
-    display: flex;
-    align-items: center;
-  }
-  .collection__image {
-    width: 50%;
-  }
-  .collection__name {
-    letter-spacing: 0;
-  }
-}
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .collection:hover {
     transform: translateY(-10px);
   }
