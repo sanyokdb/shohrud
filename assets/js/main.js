@@ -14,7 +14,7 @@ const HeroSwiper = new Swiper('.hero-slider', {
   loop: true,
   effect: "fade",
   autoplay: {
-    delay: 2500,
+    delay: 3500,
     disableOnInteraction: false,
   },
   pagination: {
