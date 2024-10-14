@@ -3,7 +3,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -607,7 +607,7 @@ progress {
   --white: #ffffff;
   --black: #000000;
   --font-family: "Fira Sans Condensed", sans-serif;
-  --second-font-family: "Cormorant", serif;
+  --second-font-family: "Lora", serif;
   --container-fluid-width: 1920px;
   --container-width: 1320px;
   --container-offset: 30px;
@@ -985,6 +985,9 @@ h5 {
   height: 500px;
   content: "";
 }
+.section-shape--dark::before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
 @media (max-width: 767.98px) {
   .section-shape::before {
     height: 280px;
@@ -1123,13 +1126,16 @@ h5 {
   margin-bottom: 0;
   font-size: clamp(2.1875rem, 0.4177rem + 5.9242vw, 3.75rem);
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
 }
 .heading__title {
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(2.75rem, -2.6303rem + 18.0095vw, 7.5rem);
   line-height: 1;
+}
+.heading--right {
+  text-align: right;
 }
 @media (max-width: 767.98px) {
   .heading {
@@ -1247,7 +1253,7 @@ h5 {
 .hero .hero-slider {
   background-size: cover;
   overflow: hidden;
-  height: 700px;
+  height: 740px;
 }
 .hero__title {
   position: relative;
@@ -1258,7 +1264,7 @@ h5 {
   width: 100%;
   max-width: 768px;
   color: #db9a6c;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 66px;
   font-family: var(--second-font-family);
   letter-spacing: 4px;
@@ -1357,8 +1363,10 @@ h5 {
 }
 .collections__btn {
   font-family: var(--second-font-family);
-  font-size: 48px;
+  font-size: 46px;
   border-radius: 100px;
+  font-weight: 400;
+  display: inline-block;
 }
 @media (max-width: 767.98px) {
   .collections__list {
@@ -1397,6 +1405,7 @@ h5 {
   margin-top: 10px;
   margin-bottom: 0;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .collection__name-link {
   color: var(--primary-color);
@@ -1409,5 +1418,44 @@ h5 {
 @media (min-width: 768px) {
   .collection:hover {
     transform: translateY(-10px);
+  }
+}
+
+.history__img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+.history__year {
+  margin-top: 180px;
+  font-family: var(--second-font-family);
+  color: var(--primary-color);
+  text-align: right;
+  line-height: 0.85;
+  opacity: 0.75;
+}
+.history__today {
+  font-size: clamp(2.75rem, -0.2233rem + 9.9526vw, 5.375rem);
+}
+.history__since {
+  font-size: clamp(4.0625rem, -11.8661rem + 53.3175vw, 18.125rem);
+}
+@media (max-width: 1199.98px) {
+  .history__year {
+    margin-top: 160px;
+  }
+}
+@media (max-width: 767.98px) {
+  .history__year {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 575.98px) {
+  .history__year {
+    margin-top: 80px;
   }
 }
