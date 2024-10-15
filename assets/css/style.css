@@ -620,7 +620,7 @@ progress {
   --body-color: #745238;
   --outline: 2px dashed currentColor;
   --outline-offset: 3px;
-  --header-height: 90px;
+  --header-height: 92px;
   --transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -1012,6 +1012,11 @@ h5 {
     padding-top: 40%;
   }
 }
+@media (max-width: 575.98px) {
+  .section-shape {
+    padding-top: 50%;
+  }
+}
 
 .section-imgbg {
   position: absolute;
@@ -1159,6 +1164,9 @@ h5 {
   font-weight: 400;
   font-size: clamp(2.75rem, -2.6303rem + 18.0095vw, 7.5rem);
   line-height: 1;
+}
+.heading--left {
+  text-align: left;
 }
 .heading--right {
   text-align: right;
@@ -1451,33 +1459,83 @@ h5 {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 820px;
+}
+.history__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .history__year {
   opacity: 0.75;
-  margin-top: 180px;
   color: var(--primary-color);
   line-height: 0.85;
   font-family: var(--second-font-family);
   text-align: right;
 }
 .history__today {
-  font-size: clamp(2.75rem, -0.2233rem + 9.9526vw, 5.375rem);
+  font-size: 80px;
 }
 .history__since {
-  font-size: clamp(4.0625rem, -11.8661rem + 53.3175vw, 18.125rem);
+  font-size: 360px;
 }
 @media (max-width: 1199.98px) {
-  .history__year {
-    margin-top: 160px;
+  .history {
+    height: 760px;
+  }
+  .history__since {
+    font-size: 260px;
+  }
+}
+@media (max-width: 991.98px) {
+  .history {
+    height: 660px;
   }
 }
 @media (max-width: 767.98px) {
-  .history__year {
-    margin-top: 120px;
+  .history {
+    height: 540px;
+  }
+  .history__today {
+    font-size: 70;
+  }
+  .history__since {
+    font-size: 180px;
   }
 }
 @media (max-width: 575.98px) {
-  .history__year {
-    margin-top: 80px;
+  .history {
+    height: 440px;
+  }
+  .history__today {
+    font-size: 50px;
+  }
+  .history__since {
+    font-size: 110px;
+  }
+}
+
+.excursions {
+  height: 820px;
+}
+@media (max-width: 1199.98px) {
+  .excursions {
+    height: 760px;
+  }
+}
+@media (max-width: 991.98px) {
+  .excursions {
+    height: 660px;
+  }
+}
+@media (max-width: 767.98px) {
+  .excursions {
+    height: 540px;
+  }
+}
+@media (max-width: 575.98px) {
+  .excursions {
+    height: 440px;
   }
 }
