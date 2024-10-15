@@ -1186,6 +1186,7 @@ h5 {
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
+  font-size: 21px;
 }
 
 .notice--left {
@@ -1199,7 +1200,7 @@ h5 {
   transform: rotate(180deg);
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .notice {
     display: none;
   }
