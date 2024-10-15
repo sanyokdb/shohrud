@@ -603,6 +603,7 @@ progress {
   --primary-dark: #bb845d;
   --primary-dark--rgb: 187, 132, 93;
   --primary-darken: #745238;
+  --primary-darken--rgb: 116, 82, 56;
   --primary-light: #f3decd;
   --white: #ffffff;
   --black: #000000;
@@ -1713,4 +1714,12 @@ h5 {
 
 [class*=copyrights-pane] {
   display: none !important;
+}
+
+.footer {
+  background-color: var(--primary-darken);
+  background-image: linear-gradient(to right, rgba(var(--primary-darken--rgb), 0.9) 0 100%), url(../img/body-light-bg.png);
+  color: var(--primary-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
