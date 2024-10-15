@@ -1588,8 +1588,9 @@ h5 {
 }
 .contacts__social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 60px;
+  gap: 40px 60px;
   margin-top: 60px;
   text-transform: uppercase;
 }
@@ -1631,6 +1632,34 @@ h5 {
   .contacts__grid {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .contacts__social {
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .contacts__social-text {
+    display: none;
+  }
+  .contacts__social-brand {
+    font-size: 20px;
+  }
+}
+@media (max-width: 477.98px) {
+  .contacts__social {
+    gap: 15px 10px;
+  }
+  .contacts__social-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .contacts svg {
+    width: 30px;
+    height: 30px;
+  }
+  .contacts__social-brand {
+    font-size: 16px;
   }
 }
 
