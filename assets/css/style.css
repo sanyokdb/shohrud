@@ -1737,11 +1737,6 @@ h5 {
   flex-wrap: wrap;
   gap: 30px;
 }
-.footer__development {
-  display: flex;
-  flex-direction: column;
-  opacity: 0.6;
-}
 .footer__brand {
   font-weight: 700;
   text-transform: uppercase;
@@ -1753,25 +1748,19 @@ h5 {
   text-align: right;
 }
 .footer__copiright {
-  max-width: 420px;
-  text-align: center;
+  max-width: 600px;
 }
 .footer__copiright-text {
   margin-top: 20px;
   margin-bottom: 0;
   text-transform: uppercase;
 }
-@media (max-width: 767.98px) {
-  .footer__copiright {
-    order: -1;
+@media (max-width: 991.98px) {
+  .footer {
+    text-align: center;
+  }
+  .footer__design {
     flex-grow: 1;
-    margin: 0 auto;
-  }
-  .footer__copiright-text {
-    margin-top: 10px;
-  }
-  .footer__development, .footer__design {
-    max-width: calc(50% - 15px);
-    flex-basis: calc(50% - 15px);
+    text-align: center;
   }
 }
