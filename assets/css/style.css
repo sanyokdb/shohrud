@@ -744,6 +744,12 @@ h5 {
   display: none !important;
 }
 
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -1098,34 +1104,6 @@ h5 {
 
 .language {
   position: relative;
-}
-.language__btn {
-  display: none !important;
-  position: relative;
-  border: 2px solid rgba(var(--primary-color--rgb), 1);
-  background-color: var(--primary-light);
-  padding: 0 10px 0 8px;
-  height: 33px;
-  color: var(--primary-color);
-  font-weight: 500;
-  line-height: 1;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.language__btn::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border: 6px solid rgba(var(--primary-color--rgb), 1);
-  border-top-color: transparent;
-  border-left-color: transparent;
-  width: 12px;
-  height: 12px;
-  content: "";
-}
-.language__content {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1157,6 +1135,75 @@ h5 {
 .language__link--active::after {
   border-bottom-color: var(--primary-color--rgb);
   border-right-color: var(--primary-color--rgb);
+}
+@media (min-width: 992px) {
+  .language {
+    display: none;
+  }
+}
+
+.language-dropdown {
+  position: relative;
+  z-index: 4;
+}
+.language-dropdown__btn {
+  position: relative;
+  border: 2px solid rgba(var(--primary-color--rgb), 1);
+  background-color: var(--primary-light);
+  padding: 0 10px 0 8px;
+  height: 33px;
+  color: var(--primary-color);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.language-dropdown__btn::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 6px solid rgba(var(--primary-color--rgb), 1);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  width: 12px;
+  height: 12px;
+  content: "";
+}
+.language-dropdown__content {
+  display: grid;
+  left: 0;
+  position: absolute;
+  top: calc(100% - 2px);
+  background-color: var(--primary-light);
+  min-width: 120px;
+  border: 2px solid var(--primary-color);
+  padding: 4px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+  transform: translateY(5px);
+  opacity: 0;
+  visibility: hidden;
+}
+.language-dropdown__link {
+  padding: 4px 8px;
+}
+.language-dropdown__link:hover {
+  color: var(--primary-light);
+  background-color: var(--primary-color);
+}
+.language-dropdown__link--active {
+  display: none;
+}
+.language-dropdown:hover .language-dropdown__content {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 991.98px) {
+  .language-dropdown {
+    display: none;
+  }
 }
 
 .heading {
@@ -1219,6 +1266,67 @@ h5 {
     display: none;
   }
 }
+@media (min-width: 1200px) {
+  .main {
+    min-height: 840px;
+  }
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img.alignleft {
+  margin: 12px 24px 12px 0;
+  margin: 0.857142857rem 1.714285714rem 0.857142857rem 0;
+}
+
+img.alignright {
+  margin: 12px 0 12px 24px;
+  margin: 0.857142857rem 0 0.857142857rem 1.714285714rem;
+}
+
+img.aligncenter {
+  margin-top: 12px;
+  margin-top: 0.857142857rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter,
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  img.alignleft,
+  img.alignright {
+    display: block;
+    float: none;
+    margin-top: 12px;
+    margin-top: 0.857142857rem;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-bottom: 0.857142857rem;
+    margin-left: auto;
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -1260,9 +1368,15 @@ h5 {
 .header__logo {
   position: relative;
   z-index: 3;
+  margin-left: 125px;
 }
 .header__nav {
   padding-top: 110px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .header__since {
   position: relative;
@@ -1279,6 +1393,11 @@ h5 {
   .header__since {
     width: auto;
     height: 45px;
+  }
+}
+@media (max-width: 991.98px) {
+  .header__logo {
+    margin-left: 0;
   }
 }
 @media (max-width: 477.98px) {
@@ -1730,6 +1849,13 @@ h5 {
   width: 38px;
   height: 38px;
   color: var(--primary-color);
+}
+.contact-item__maplink {
+  color: var(--white);
+  text-decoration: underline;
+}
+.contact-item__maplink:hover {
+  color: var(--primary-light);
 }
 .contact-item__text {
   align-self: center;
