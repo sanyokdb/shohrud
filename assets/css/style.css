@@ -2196,6 +2196,54 @@ img.img-center {
   }
 }
 
+.presscenter__sidebar {
+  grid-column: 3 span;
+}
+.presscenter__content {
+  grid-column: 3 span;
+}
+
+.sidebar-nav__list > li + li {
+  margin-top: 20px;
+}
+.sidebar-nav__list > li > a {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-weight: 300;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.sidebar-nav__list > li > a:hover, .sidebar-nav__list > li.is-active > a {
+  background-color: var(--primary-color);
+  color: var(--primary-light);
+}
+.sidebar-nav__list > li.dropdown > a {
+  padding-right: 40px;
+}
+.sidebar-nav__list > li.dropdown > a::before, .sidebar-nav__list > li.dropdown > a::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 1.5px;
+  height: 16px;
+  background-color: var(--primary-color);
+  transition: 0.5s;
+}
+.sidebar-nav__list > li.dropdown > a::before {
+  transform: rotate(-45deg);
+  right: 28px;
+}
+.sidebar-nav__list > li.dropdown > a::after {
+  transform: rotate(45deg);
+  right: 18px;
+}
+.sidebar-nav__list > li.dropdown > a:hover::before, .sidebar-nav__list > li.dropdown > a:hover::after {
+  background-color: var(--primary-light);
+}
+
 .footer {
   position: relative;
   background-image: linear-gradient(to right, rgba(var(--primary-darken--rgb), 0.9) 0 100%), url(../img/body-light-bg.png);
