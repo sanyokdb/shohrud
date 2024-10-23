@@ -79,7 +79,7 @@
               <ul class="list-reset sidebar-nav__list">
                 <li><a href="./news.html">Новости</a></li>
                 <li><a href="./gallery.html">Фотогалерея</a></li>
-                <li><a href="./video.html">Видео</a></li>
+                <li class="is-active"><a href="./video.html">Видео</a></li>
                 <li class="dropdown">
                   <a href="#!">Акционерам и инвесторам</a>
                   <ul class="list-reset subnav">
@@ -111,11 +111,46 @@
             </div>
           </div>
           <div class="presscenter__content">
-            <h3 class="text-primary">Заголовок</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, dolore velit. Mollitia sequi sed labore? Sunt odit doloribus officia nobis laboriosam a quidem aliquid sequi provident, saepe quisquam id voluptate alias ex molestias maxime corporis quod dolorum obcaecati vel quaerat ad nihil quia eius! Ex quod quidem, animi reiciendis blanditiis exercitationem, consequatur deleniti aperiam mollitia vero, velit voluptate a ab?</p>
-            <p>Quia non nesciunt molestias eius ipsum? Numquam voluptatibus quisquam sit blanditiis maiores laborum non, eos qui perspiciatis cupiditate ducimus pariatur molestias dolorum laboriosam. Minus accusantium vero ipsum! Sint, quidem est quasi exercitationem in quia reiciendis id nemo accusamus minima corrupti et tempora esse totam numquam natus qui? Nemo suscipit fugit expedita, ullam unde eligendi animi impedit illum voluptatibus quae assumenda?</p>
-            <p>Aspernatur necessitatibus harum repudiandae, similique voluptatem eligendi hic fuga nulla molestias iusto, quod dolore excepturi blanditiis quisquam placeat et distinctio sequi, magni laborum itaque quam? Repudiandae culpa officia, similique impedit fuga repellendus doloribus. Consequuntur accusantium rem ad. Voluptas excepturi, iste officia, asperiores quas, ex atque perferendis quisquam ad sapiente iure quae porro odio ab id ea? Libero necessitatibus minus atque?</p>
-            <p>Commodi quasi numquam dolorem deleniti eos perspiciatis veniam, rerum tempora maxime quis, non quidem! Quaerat neque eligendi nemo, obcaecati iure earum porro ullam? Eaque mollitia perferendis voluptas consectetur ad culpa quisquam soluta inventore quaerat et iusto rem modi odio labore minima placeat ut ea, deserunt sint dignissimos nesciunt consequuntur. Delectus eaque, ratione nemo minus suscipit accusamus obcaecati odio. Accusamus, fugiat.</p>
+            <h3 class="text-primary">Видео</h3>
+            <div class="video-list">
+              <div class="video-list__item">
+                <a class="img-decor" href="https://www.youtube.com/watch?v=6qNdsr5cOB8" data-fancybox="video" data-caption="Video Caption">
+                  <picture>
+                    <source srcset="./assets/img/gallery/001.webp" type="image/webp">
+                    <img src="./assets/img/gallery/001.jpg" width="450" height="350" alt="image">
+                  </picture>
+                  <span class="video-btn"></span>
+                </a>
+              </div>
+              <div class="video-list__item">
+                <a class="img-decor" href="https://www.youtube.com/watch?v=cXuZTbHMt9A" data-fancybox="video" data-caption="Video Caption">
+                  <picture>
+                    <source srcset="./assets/img/gallery/002.webp" type="image/webp">
+                    <img src="./assets/img/gallery/001.jpg" width="450" height="350" alt="image">
+                  </picture>
+                  <span class="video-btn"></span>
+                </a>
+              </div>
+              <div class="video-list__item">
+                <a class="img-decor" href="https://www.youtube.com/watch?v=FMNmKoqjV8U" data-fancybox="video" data-caption="Video Caption">
+                  <picture>
+                    <source srcset="./assets/img/gallery/003.webp" type="image/webp">
+                    <img src="./assets/img/gallery/003.jpg" width="450" height="350" alt="image">
+                  </picture>
+                  <span class="video-btn"></span>
+                </a>
+              </div>
+            </div>
+            <ul class="list-reset pagination">
+              <li class="page-item paper disabled"><a class="page-link" href="#" title="«"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path></svg></a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" href="#">12</a></li>
+              <li class="page-item paper page-paper"><a class="page-link" href="#">1 / 12</a></li>
+              <li class="page-item paper"><a class="page-link" href="#" title="»"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg></a></li>
+            </ul>
           </div>
         </div>
         

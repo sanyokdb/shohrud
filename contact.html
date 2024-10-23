@@ -74,7 +74,7 @@
             <div class="contact-item">
               <div class="contact-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path></svg></div>
               <div class="contact-item__text">
-                Республика Узбекистан, город Бухара, улица Бахауддина Накшбанди, 195 
+                Республика Узбекистан, город Бухара, улица Бахауддина Накшбанди, 195
                 <br><a class="contact-item__maplink" href="https://yandex.ru/maps/-/CDX3ZIZF" target="_blank">(на Yandex Картах)</a>
               </div>
             </div>
@@ -93,6 +93,56 @@
           </div>
           <div class="contact-info__map">
             <div id="map" class="map"></div>
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=76b6adf8-8ae0-46ba-aaa7-43c8560c98df&lang=ru_RU"></script>
+            <script>
+              // Yandex Maps 39.771848, 64.445303
+              let center = [39.771848,64.445303];
+
+              function init() {
+                let map = new ymaps.Map('map', {
+                  center: center,
+                  zoom: 17
+                });
+
+                let placemark = new ymaps.Placemark(center, {
+                  balloonContentHeader: 'Хедер балуна',
+                  balloonContentBody: 'Боди балуна',
+                  balloonContentFooter: 'Подвал',
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: 'https://cdn-icons-png.flaticon.com/512/6063/6063856.png',
+                  iconImageSize: [40, 40],
+                  iconImageOffset: [-20, -40]
+                });
+                let placemark1 = new ymaps.Placemark(center, {
+                  balloonContent: `
+                    <div class="balloon">
+                      <div class="balloon__address">г. Париж</div>
+                      <div class="balloon__contacts">
+                        <a href="tel:+7999999999">+7999999999</a>
+                      </div>
+                    </div>
+                  `
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: 'https://cdn-icons-png.flaticon.com/512/6063/6063856.png',
+                  iconImageSize: [40, 40],
+                  iconImageOffset: [-20, -40]
+                });
+                map.controls.remove('geolocationControl'); // удаляем геолокацию
+                map.controls.remove('searchControl'); // удаляем поиск
+                map.controls.remove('trafficControl'); // удаляем контроль трафика
+                map.controls.remove('typeSelector'); // удаляем тип
+                map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+                map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+                map.controls.remove('rulerControl'); // удаляем контрол правил
+                // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+                // map.geoObjects.add(placemark);
+                map.geoObjects.add(placemark);
+                placemark1.balloon.open();
+              }
+              ymaps.ready(init);
+            </script>
           </div>
         </div>
         <div class="contact-social contact-social--top">
