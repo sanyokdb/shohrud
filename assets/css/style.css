@@ -605,6 +605,7 @@ progress {
   --primary-darken: #745238;
   --primary-darken--rgb: 116, 82, 56;
   --primary-light: #f3decd;
+  --primary-light--rgb: 243, 222, 205;
   --white: #ffffff;
   --black: #000000;
   --font-family: "Fira Sans Condensed", sans-serif;
@@ -808,6 +809,27 @@ h5, .h5 {
   background-color: rgba(var(--primary-dark--rgb), 0.9);
 }
 
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-darken);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(var(--primary-light--rgb), 0.8);
+  background-clip: padding-box;
+  border: 2px solid rgba(var(--primary-color--rgb), 0.4);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}
+.form-control:hover, .form-control:focus {
+  border-color: rgba(var(--primary-color--rgb), 0.8);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -821,7 +843,7 @@ h5, .h5 {
   color: var(--primary-light);
   font-weight: 500;
   font-size: var(--body-font-size);
-  line-height: 32px;
+  line-height: 1.5;
   letter-spacing: 2px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1858,19 +1880,19 @@ img.img-center {
   flex-wrap: wrap;
 }
 .contact-info__content {
-  flex: 0 0 auto;
-  width: 50%;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   justify-content: center;
   background-image: linear-gradient(to right, rgba(var(--primary-color--rgb), 0.9) 0 100%), url(../img/body-light-bg.png);
   background-color: var(--primary-color);
   padding: 50px;
+  width: 50%;
 }
 .contact-info__map {
   flex: 0 0 auto;
-  width: 50%;
   border: 3px solid var(--primary-color);
+  width: 50%;
 }
 @media (max-width: 991.98px) {
   .contact-info__content, .contact-info__map {
@@ -2001,6 +2023,39 @@ img.img-center {
 }
 .contact-item + .contact-item {
   margin-top: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1000px;
+}
+.contact-form .form-control {
+  margin-bottom: 24px;
+}
+.contact-form__left {
+  flex: 0 0 auto;
+  width: calc(50% - 15px);
+}
+.contact-form__right {
+  flex: 0 0 auto;
+  width: calc(50% - 15px);
+}
+.contact-form__button {
+  width: 100%;
+}
+.contact-form__danger {
+  margin-top: 20px;
+  color: #f44336;
+  font-style: italic;
+}
+.contact-form__success {
+  margin-top: 20px;
+  color: #4caf50;
+  font-style: italic;
 }
 
 .map {
