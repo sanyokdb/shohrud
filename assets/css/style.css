@@ -2465,8 +2465,9 @@ img.img-center {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  background-image: url("https://static1.dmcdn.net/images/home/play.png");
-  background-position: 17px center;
+  background-image: url("../../assets/img/icon/play-large-fill.svg");
+  background-size: 50%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-color: rgba(var(--primary-color--rgb), 0.9);
   width: 66px;
